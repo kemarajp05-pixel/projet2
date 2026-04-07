@@ -5,7 +5,7 @@ def aff_mouton(position):
     rectangle(x ,y ,x+50 ,y+50 , "black", "black")
 
 def vect_aff():
-    chose
+    return None
 
-def vect_acc(vitesse):
-    reine
+    
+

@@ -10,5 +10,5 @@ personnage= {
 if __name__ == "__main__":
     cree_fenetre(900,900)
     aff_mouton(personnage["position"])
-    vect()
+    print(vect())
     attend_fermeture()
