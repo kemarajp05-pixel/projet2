@@ -8,5 +8,6 @@ def aff_mouton(position):
 def vect_aff(position, click):
     #à compléter 
 
-    
-
+def affiche_sol(ymax):
+    largeur = largeur_fenetre() 
+    ligne(0, ymax, largeur, ymax, couleur="black", epaisseur=3)
