@@ -1,7 +1,7 @@
 from fltk import *
 from modelisation import *
 from calque import *
-from modèle import 
+from modèle import *
 
 personnage= {
     "position": (100,100),
