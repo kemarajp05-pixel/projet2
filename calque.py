@@ -22,8 +22,8 @@ def angle(position, click, sol):
     sol1 = (click[0],sol)
     x1, y1 = vect(sol1, click)
     norme_s = sqrt(x1**2 + y1**2)
-    return norme_s/norme_v
+    return asin(norme_s/norme_v)
     
-    
+
             
             
