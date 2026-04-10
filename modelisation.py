@@ -9,5 +9,7 @@ def vect_aff(position, click):
     lst=[position, click]
     polygone(lst)
 
+def affiche_sol(ymax):
+    largeur = largeur_fenetre() 
+    ligne(0, ymax, largeur, ymax, couleur="black", epaisseur=3)
     
-
