@@ -10,14 +10,10 @@ def vect_aff(position, click):
     x1, y1 = click
     vect1 = vect(position, click)
     if vect_max(vect1):
-        x2, y2 = vect1
-        norme1 = norme(x2, y2)
-        x2 = 100 * (x2/norme1)
-        y2 = 100 * (y2/norme1)
-        x1 = x + x2
-        y1 = y + y2
+        x1, y1 = vect_cor(position, vect1)
     ligne(x, y, x1, y1,"red", 4)
     fleche(x, y, x1, y1,"red", 6)
+    return (x1, y1)
 
 def affiche_sol(ymax):
     largeur = largeur_fenetre() 
