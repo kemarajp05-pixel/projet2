@@ -6,8 +6,8 @@ def aff_mouton(position):
     rectangle(x ,y ,x+50 ,y+50 , "black", "black")
 
 def vect_aff(position, click):
-    #à compléter 
+    lst=[position, click]
+    polygone(lst)
 
-def affiche_sol(ymax):
-    largeur = largeur_fenetre() 
-    ligne(0, ymax, largeur, ymax, couleur="black", epaisseur=3)
+    
+
