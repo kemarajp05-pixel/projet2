@@ -5,10 +5,12 @@ from modelisation import *
 def click():
     ev= attend_ev()
     typeEv = type_ev(ev)
+    x = abscisse(ev)
+    y = ordonnee(ev)
     if typeEv == "ClicGauche":
-        x = abscisse(ev)
-        y = ordonnee(ev)
-        return (x, y)
+        return (x, y), False
+    if typeEv == "ClicDroit":
+        return (x, y), True
 
 def vect(position, click):
     xp, yp = position
