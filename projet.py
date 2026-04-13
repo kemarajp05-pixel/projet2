@@ -3,27 +3,36 @@ from modelisation import *
 from calque import *
 from modèle import *
 
-personnage= {
-    "position": (450,600),
-    "vitesse": (0,0),
-    "gravité": (0,10),
-    "temps": 0.1
-    }
-game = True
+YMAX = 800
+
+personnage = {
+    "position": (450, 600),
+    "vitesse": (0, 0),
+    "gravité": (0, 10), 
+    "temps": 0.2        
+}
+
+def rafraichir_ecran():
+    """
+    Fonction qui redessine tout le niveau
+    """
+    efface_tout()
+    affiche_sol(YMAX)
+    aff_mouton(personnage["position"])
 
 if __name__ == "__main__":
-    cree_fenetre(900,900)
-    affiche_sol(ymax)
+    cree_fenetre(900, 900)
+    game = True  
     while game:
-        aff_mouton(personnage["position"])
+        rafraichir_ecran()
         click_droit = False
         while not click_droit:
-            click1, click_droit = click()
-            efface_tout()
-            aff_mouton(personnage["position"])
-            affiche_sol(ymax)
-            personnage["vitesse"] = vect_aff(personnage["position"], click1)
+            clic_pos, click_droit = click()
+            v_cible = vect(personnage["position"], clic_pos)
+            personnage["vitesse"] = v_cible
+            rafraichir_ecran()
+            vect_aff(personnage["position"], clic_pos)
             mise_a_jour()
-        personnage["position"] = bouge(personnage["position"], personnage["vitesse"], personnage["gravité"], personnage["temps"])
+        bouge(personnage, YMAX, rafraichir_ecran)
     attend_fermeture()
     
