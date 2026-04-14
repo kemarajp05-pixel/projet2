@@ -60,7 +60,7 @@ def angle(position, click, sol):
     return asin(norme_s/norme_v)
 
 
-def bouge(personnage, y_sol, affichage_callback):
+def bouge(personnage, y_sol):
     """
     fonction pour redessiner l'écran à chaque pas.
     """
@@ -80,7 +80,6 @@ def bouge(personnage, y_sol, affichage_callback):
             en_mouvement = False
         personnage["position"] = (x, y)
         personnage["vitesse"] = (vx, vy)
-        affichage_callback()
         mise_a_jour()
     return (x, y)           
             
