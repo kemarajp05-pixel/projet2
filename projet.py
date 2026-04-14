@@ -33,6 +33,6 @@ if __name__ == "__main__":
             rafraichir_ecran()
             vect_aff(personnage["position"], clic_pos)
             mise_a_jour()
-        bouge(personnage, YMAX, rafraichir_ecran)
+        bouge(personnage, YMAX)
     attend_fermeture()
     
