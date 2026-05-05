@@ -26,44 +26,50 @@ def aff_acc():
 #         return (x, y)
     
                
-# def bouton_parametre():
-#     image(735,25,"options_acc.png",largeur=150, hauteur=50, ancrage='nw')
-#     image(735,25,"nuage_options_acc.png",largeur=150, hauteur=50, ancrage='nw')
-#     rectangle(740,30,885,75, "black", epaisseur=1)
-#     #nuage_options_acc.png a faire
+def bouton_parametre():
+    rectangle(740,30,885,75, "grey", "#87CEEB")
+    texte(812.5, 37.5, "OPTIONS", "white", taille=20, ancrage="n")
     
 
 def aff_options():
     efface_tout()
-    rectangle(0,0,900,900, "#87CEEB", "#87CEEB")
-    rectangle(500,0,900,900, "#2F4F4F", "#2F4F4F")
-    image(100,355,"images/mouton_blanc.png",largeur=320, hauteur=300, ancrage='nw')
+    # Fond et séparation
+    rectangle(0, 0, 900, 900, "#87CEEB", "#87CEEB")
+    rectangle(500, 0, 900, 900, "#2F4F4F", "#2F4F4F")
+    rectangle(150,620,350,900,"black","#2F4F4F")
+    
+    rectangle(150,380,350,620, "white")
+ #   image(85, 355, "images/mouton_blanc.png", largeur=320, hauteur=300, ancrage='nw')
+    
     texte(700, 35, "MENU DES SKINS", "white", taille=30, ancrage="n")
+    # Taille cadre blanc: largeur=180, hauteur=220
     
-    rectangle(525,135,680,300, "white", "#2F4F4F", epaisseur=1)#noir
-    image(430,110,"images/mouton_noir.png",largeur=320, hauteur=300, ancrage='nw')
+    # MOUTON NOIR
+    rectangle(510, 120, 690, 340, "white", epaisseur=2) 
+    image(470, 90, "images/mouton_noir.png", largeur=250, hauteur=280, ancrage='nw')
     
-    rectangle(650,0,650,900, "#2F4F4F", "#2F4F4F", epaisseur=1)#apiculteur
-    image(685,125,"images/mouton_apiculteur.png",largeur=225, hauteur=275, ancrage='nw')
+    # MOUTON APICULTEUR
+    rectangle(705, 120, 885, 340, "white", epaisseur=2)
+    image(715, 100, "images/mouton_apiculteur.png", largeur=165, hauteur=255, ancrage='nw')
     
-    rectangle(650,0,650,900, "#2F4F4F", "#2F4F4F", epaisseur=1)#graffeur
-    image(430,355,"images/mouton_graffeur.png",largeur=225, hauteur=275, ancrage='nw')
+    # MOUTON GRAFFEUR
+    rectangle(510, 360, 690, 580, "white", epaisseur=2)
+    image(512.5, 370, "images/mouton_graffeur.png", largeur=170, hauteur=220, ancrage='nw')
     
-    rectangle(650,0,650,900, "#2F4F4F", "#2F4F4F", epaisseur=1)#pharaon
-    image(100,355,"images/mouton_pharaon.png",largeur=320, hauteur=300, ancrage='nw')
+    # MOUTON PHARAON
+    rectangle(705, 360, 885, 580, "white", epaisseur=2)
+    image(690, 340, "images/mouton_pharaon.png", largeur=180, hauteur=260, ancrage='nw')
     
-    rectangle(650,0,650,900, "#2F4F4F", "#2F4F4F", epaisseur=1)#campagnard
-    image(100,355,"images/mouton_campagnard.png",largeur=320, hauteur=300, ancrage='nw')
+    # MOUTON CAMPAGNARD
+    rectangle(510, 600, 690, 820, "white", epaisseur=2)
+    image(505, 595, "images/mouton_campagnard.png", largeur=175, hauteur=240, ancrage='nw')
 
-def options():
-    if 740 <= x <= 885 and 30 <= y <= 75 and a==0:
-        mise_a_jour()
-        aff_options()
-        pass
+    mise_a_jour()
 
-aff_options()
-#aff_acc()
-#bouton_parametre()
+
+
+
+
 
 attend_fermeture()
 
