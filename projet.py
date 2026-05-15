@@ -2,6 +2,7 @@ from fltk import *
 from modelisation import *
 from calque import *
 from modèle import *
+from vue import *
    
 # # # ne pas touché ca ca marche
 #     (100, 480, 250, 500,"colle",0), 
@@ -42,6 +43,8 @@ personnage = creer_personnage(285, 562,"images/mouton_blanc.png" )
 
 if __name__ == "__main__":
     cree_fenetre(900, 620) #a voir si on peut faire avec (770,770) car fenetre trop grande
+    #aff_acc()
+    #bouton_parametre()
     game = True  
     while game:
         rafraichir_ecran(personnage, lst_blocs, objectif)
