@@ -1,5 +1,5 @@
 from fltk import *
-cree_fenetre(900,600)
+#cree_fenetre(900,600)
 
 def aff_acc():
     rectangle(0, 0,900,900, "#87CEEB", "#87CEEB")

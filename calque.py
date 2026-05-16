@@ -29,37 +29,26 @@ def norme(x, y):
 
 def vect_max(vect):
     """
-    fonction qurafraichir_ecran()i vérifie si le vecteur dépasse un certain seuil ici 25
+    fonction qurafraichir_ecran()i vérifie si le vecteur dépasse un certain seuil ici 20
     """
     x, y = vect
-    if norme(x,y)>25:
+    if norme(x,y)>40:
         return True
     return False
 
-def vect_cor(position, vect1):
+def vect_cor(position, vect1, echelle):
     """
-    corrige le vecteur si vect_max est dépassé
+    corrige le vecteur à l'echelle
     """
     x, y = position
     x2, y2 = vect1
     norme1 = norme(x2, y2)
-    x2 = 25 * (x2/norme1)
-    y2 = 25 * (y2/norme1)
+    x2 = echelle * (x2/norme1)
+    y2 = echelle * (y2/norme1)
     x1 = x + x2
     y1 = y + y2
     return (x1, y1), (x2, y2)
 
-
-def angle(position, click, sol):
-    """
-    à refaire pas complet
-    """
-    x, y = vect(position, click)
-    norme_v = norme(x,y)
-    sol1 = (click[0],sol)
-    x1, y1 = vect(sol1, click)
-    norme_s = norme(x1,y1)
-    return asin(norme_s/norme_v)
 
        
             

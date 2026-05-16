@@ -3,7 +3,7 @@ from modelisation import *
 from calque import *
 from modèle import *
 from vue import *
-from solver import *
+#from solver import *
 from time import sleep
 # # # ne pas touché ca ca marche
 #     (100, 480, 250, 500,"colle",0), 

@@ -3,14 +3,6 @@ from fltk import *
 from modèle import *
 
 
-# def aff_mouton(personnage):
-#     x, y = personnage["position"]
-# #     texte(x, y, "🐑", couleur="black", taille=30, ancrage="nw")
-#     chemin_skin = personnage["skin"]
-#     image(x, y, chemin_skin, largeur=largeur, hauteur=hauteur, ancrage="nw")
-#     #rectangle(x+17, y+5, (x + largeur)-14, (y + hauteur)-4, couleur="blue", remplissage="", epaisseur=2)
-#     rectangle(x, y, (x + largeur), (y + hauteur), couleur="blue", remplissage="", epaisseur=2)
-
 def aff_mouton(personnage):
     x, y = personnage["position"]
     chemin_skin = personnage["skin"] 
@@ -25,7 +17,7 @@ def aff_objectif(objectif):
 
 
 def vect_aff(position, clic_pos):
-    x, y = position
+    x, y = position 
     x1, y1 = clic_pos
     ligne(x, y, x1, y1,"red", 4)
     fleche(x, y, x1, y1,"red", 6)
